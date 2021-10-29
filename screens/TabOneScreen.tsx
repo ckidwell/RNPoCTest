@@ -33,11 +33,16 @@ export default function TabOneScreen({
       <Button
         title="Submit"
         onPress={() => {
-          console.log('Text1 value is : ' + text1);
+          console.log('Text 1 value is : ' + text1);
           setText2(text1);
         }}
       />
-      <Text>{text2}</Text>
+      <Text
+        testID="appiumWontFindThisOnAndroid"
+        accessibilityLabel="appiumWillFindThisOnAndroid"
+      >
+        {text2}
+      </Text>
     </View>
   );
 }
